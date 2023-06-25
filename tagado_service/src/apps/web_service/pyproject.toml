@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "web-service"
+version = "0.1.0"
+description = "fast api web service"
+authors = ["Alon Fux"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.98.0"
+uvicorn = "^0.22.0"
+gunicorn = "^20.1.0"
+pymongo = "^4.4.0"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
