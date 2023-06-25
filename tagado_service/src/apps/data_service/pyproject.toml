@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "data-service"
+version = "0.1.0"
+description = "data service to get information and insert to mongo"
+authors = ["Alon Fux"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mongo = "^0.2.0"
+pymongo = "^4.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
