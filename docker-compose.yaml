@@ -1,0 +1,30 @@
+services:
+  mongodb:
+    image: mongo:6.0.4
+    restart: always
+    ports:
+      - 27017:27017
+
+  tagadoservice:
+    build:
+      context: ./tagado_service/src/apps/web_service/
+    depends_on:
+      - tagadodataservice
+    image: web-service:1.0.0
+    restart: always
+    ports:
+      - 7000:7000
+    links:
+      - "mongodb:mongo"
+    
+  tagadodataservice:
+    build:
+      context: ./tagado_service/src/apps/data_service/
+    depends_on:
+      - mongodb
+    image: data-service:1.0.0
+    restart: always
+    ports:
+      - 7001:7001
+    links:
+      - "mongodb:mongo"

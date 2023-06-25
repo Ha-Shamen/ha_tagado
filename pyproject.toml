@@ -1,0 +1,17 @@
+[build-system]
+requires = ["poetry>=1.5.1"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "tagado"
+version = "0.1.0"
+description = "Tagado Home assignment"
+authors = ["Alon Fux <AlonFux@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pymongo = "^4.4.0"
+gunicorn = "^20.1.0"
+uvicorn = "^0.22.0"
+fastapi = "^0.98.0"
+requests = "^2.31.0"
